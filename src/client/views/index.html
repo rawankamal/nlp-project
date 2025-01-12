@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Analyzer</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>
+        URL Analyzer
+    </h1>
+    <form id="urlForm">
+        <input type="text" id="URI" name="URI" placeholder="Enter URL">
+        <button type="submit">Analyze</button>
+    </form>
+    <div id="loader" style="display: none;">Loading...</div>
+    <div id="error" style="display: none;"></div>
+    <ul>
+        <li id="agreement" style="display: none;"></li>
+        <li id="subjectivity" style="display: none;"></li>
+        <li id="confidence" style="display: none;"></li>
+        <li id="irony" style="display: none;"></li>
+        <li id="score_tag" style="display: none;"></li>
+    </ul>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
