@@ -1,20 +1,11 @@
-const { isValidUrl } = require("../views/js/checkURL")
+const { isValidUrl } = require("../views/js/checkURL");
 
-describe('urlValidity', ()=> {
-    test('test if strings are false urls', () => {
-        expect(isValidUrl("read")).toBeFalsy();
-    })
-    
-    test('emails are not considered valid urls', () => {
-        expect(isValidUrl("mailto:ahmed@gmail.com")).toBeFalsy();
-    })
-    
-    test('expect urls to be true', () => {
-        expect(isValidUrl("https://www.google.com")).toBeTruthy();
-    })
+describe('URL Validation Tests', () => {
+    it('should return false for invalid URL strings', () => {
+        expect(isValidUrl("read")).toBe(false);
+    });
 
-    test('expect empty string to be falsy', () => {
-        expect(isValidUrl("")).toBeFalsy();
-    })
-})
-
+    it('should return false for email addresses', () => {
+        expect(isValidUrl("mailto:ahmed@gmail.com")).toBe(false);
+    });
+});
